@@ -1,98 +1,104 @@
-# Приложение для блога
+# Blog Application
 
-Это блоговое приложение на Django, которое позволяет пользователям создавать, просматривать, редактировать и удалять записи блога. Приложение включает такие функции, как комментирование постов и загрузка изображений.
+A Django-based blog application allowing users to create, view, edit, and delete blog posts. This application includes features such as commenting on posts and uploading images.
 
-## Функции
+## Features
 
-- Создание, просмотр, редактирование и удаление записей блога
-- Комментирование записей блога (опционально)
-- Загрузка изображений к записям блога (опционально)
-- Административный интерфейс для управления записями
+- Create, view, edit, and delete blog posts
+- Optional commenting on blog posts
+- Optional image uploads to blog posts
+- Admin interface for managing posts
 
-## Начало работы
+## Getting Started
 
-Эти инструкции помогут вам настроить проект на вашем локальном компьютере для разработки и тестирования.
+These instructions will help you set up the project on your local machine for development and testing purposes.
 
-### Необходимые условия
+### Prerequisites
 
 - Python 3.x
 - Django 3.x
-- Virtualenv (опционально, но рекомендуется)
+- Virtualenv (optional but recommended)
 
-### Установка
+### Installation
 
-1. **Клонируйте репозиторий:**
+1. **Clone the repository:**
 
     ```bash
     git clone https://github.com/yataknemogy/blog.git
     cd blog
     ```
 
-2. **Создайте и активируйте виртуальное окружение:**
+2. **Create and activate a virtual environment:**
 
     ```bash
     python3 -m venv venv
-    source venv/bin/activate  # На Windows используйте `venv\Scripts\activate`
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
-3. **Примените миграции:**
+3. **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Apply migrations:**
 
     ```bash
     python manage.py migrate
     ```
 
-4. **Создайте суперпользователя:**
+5. **Create a superuser:**
 
     ```bash
     python manage.py createsuperuser
     ```
 
-5. **Запустите сервер разработки:**
+6. **Run the development server:**
 
     ```bash
     python manage.py runserver
     ```
 
-6. **Доступ к приложению:**
+7. **Access the application:**
 
-    - Перейдите на `http://127.0.0.1:8000`, чтобы увидеть блог.
-    - Перейдите на `http://127.0.0.1:8000/admin`, чтобы получить доступ к административному интерфейсу.
+    - Go to `http://127.0.0.1:8000` to view the blog.
+    - Go to `http://127.0.0.1:8000/admin` to access the admin interface.
 
-## Использование
+## Usage
 
-### Создание записи
+### Creating a Post
 
-1. Войдите в административный интерфейс по адресу `http://127.0.0.1:8000/admin`.
-2. Нажмите на "Posts" и затем "Add Post".
-3. Заполните заголовок и содержание, затем нажмите "Save".
+1. Log in to the admin interface at `http://127.0.0.1:8000/admin`.
+2. Click on "Posts" and then "Add Post".
+3. Fill in the title and content, then click "Save".
 
-### Просмотр записей
+### Viewing Posts
 
-- Посетите `http://127.0.0.1:8000`, чтобы увидеть список всех записей блога.
-- Нажмите на заголовок записи, чтобы увидеть детальный просмотр.
+- Visit `http://127.0.0.1:8000` to see a list of all blog posts.
+- Click on the post title to view the detailed post.
 
-### Редактирование или удаление записи
+### Editing or Deleting a Post
 
-1. Войдите в административный интерфейс по адресу `http://127.0.0.1:8000/admin`.
-2. Нажмите на "Posts" и затем на запись, которую хотите отредактировать или удалить.
-3. Внесите изменения и нажмите "Save" или нажмите "Delete", чтобы удалить запись.
+1. Log in to the admin interface at `http://127.0.0.1:8000/admin`.
+2. Click on "Posts" and then on the post you want to edit or delete.
+3. Make changes and click "Save" or click "Delete" to remove the post.
 
-### Дополнительные функции
+### Additional Features
 
-#### Комментарии
+#### Comments
 
-1. Разкомментируйте и настройте код, связанный с комментариями, в приложении `blog`.
-2. Примените миграции и обновите настройки админки для управления комментариями.
+1. Uncomment and configure the code related to comments in the `blog` app.
+2. Apply migrations and update admin settings to manage comments.
 
-#### Загрузка изображений
+#### Image Uploads
 
-1. Разкомментируйте и настройте код, связанный с загрузкой изображений, в приложении `blog`.
-2. Установите необходимые зависимости (например, Pillow) и обновите настройки для медиафайлов.
+1. Uncomment and configure the code related to image uploads in the `blog` app.
+2. Install necessary dependencies (e.g., Pillow) and update settings for media files.
 
-## Внесение изменений
+## Contributing
 
-Пожалуйста, прочитайте [CONTRIBUTING.md](CONTRIBUTING.md) для получения подробной информации о нашем кодексе поведения и процессе отправки пул-реквестов.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## Лицензия
+## License
 
-Этот проект лицензирован по лицензии MIT - подробности смотрите в файле [LICENSE](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
